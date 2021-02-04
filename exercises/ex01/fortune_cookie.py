@@ -13,6 +13,7 @@ from random import randint
 
 
 # Begin your solution here...
+
 print("Your fortune cookie says...")
 
 cookie_number: int = randint(1,4)
