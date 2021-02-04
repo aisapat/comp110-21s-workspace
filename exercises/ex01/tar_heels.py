@@ -4,6 +4,7 @@ __author__ = "730387431"
 
 
 # Begin your solution here...
+
 guess: int = int(input("Enter an int: "))
 
 if guess % 2 == 0 and guess % 7 != 0:
