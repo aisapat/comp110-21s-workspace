@@ -16,7 +16,7 @@ from random import randint
 
 print("Your fortune cookie says...")
 
-cookie_number: int = randint(1,4)
+cookie_number: int = randint(1, 4)
 
 if cookie_number < 2:
     print("Fortune Cookie Message 1")
