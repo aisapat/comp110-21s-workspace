@@ -19,7 +19,7 @@ from datetime import timedelta
 
 # Begin your solution here...
 
-"""Questions: is using the round built-in required? How do I get the 000s out"""
+
 population: int = int(input("Population: "))
 administered: int = int(input("Doses administered: "))
 per_day: int = int(input("Doses per day: "))
@@ -29,7 +29,6 @@ num_vac: int = round(float(target / 100.0) * (population * 2))
 ppl_left: int = num_vac - administered
 
 days: int = int(ppl_left / per_day)
-
 num_days: timedelta = timedelta(days)
 
 today: datetime = datetime.today()
