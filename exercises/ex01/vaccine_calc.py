@@ -25,6 +25,7 @@ administered: int = int(input("Doses administered: "))
 per_day: int = int(input("Doses per day: "))
 target: int = int(input("Target percent vaccinated: "))
 
+
 num_vac: int = round(float(target / 100.0) * (population * 2))
 ppl_left: int = num_vac - administered
 
