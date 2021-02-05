@@ -18,3 +18,20 @@ from datetime import timedelta
 
 
 # Begin your solution here...
+
+"""Questions: is using the round built-in required? How do I get the 000s out"""
+population: int = int(input("Population: "))
+administered: int = int(input("Doses administered: "))
+per_day: int = int(input("Doses per day: "))
+target: int = int(input("Target percent vaccinated: "))
+
+num_vac: int = float((target) / 100.0) * (population * 2)
+ppl_left: int = num_vac - administered
+
+num_days: timedelta = timedelta(ppl_left / per_day)
+
+today: datetime = datetime.today()
+
+best_day: datetime = today + num_days
+
+print("We will reach " + str(target) + "% vaccination in " + str(num_days) + " which falls on " + (best_day).strftime("%B %d, %Y") + ".")
