@@ -2,7 +2,7 @@
 
 from datetime import datetime, timedelta
 
-__author__ = "YOUR 9-DIGIT PID"
+__author__ = "730387431"
 
 
 def main() -> None:
@@ -18,16 +18,18 @@ def main() -> None:
     # TODO 5: Print the expected output using the variables above.
     print("We will reach " + str(target) + "% vaccination in " + str(num_days) + " days, which falls on " + str(yay) + ".")
 
-# TODO 1: Define days_to_target function
-def days_to_target (a: int, b: int, c:int, d:int) -> int:
-    num_vac: int = int(round((d/100)*(a*2)))
+
+def days_to_target(a: int, b: int, c: int, d: int) -> int:
+    """calculates number of days until target is reached"""
+    num_vac: int = int(round((d / 100) * (a * 2)))
     ppl_left: int = int(num_vac - b)
     days: int = int(ppl_left / c)
     return(days)
 
 
 # TODO 3: Define future_date function
-def future_date (x: int) -> str:
+def future_date(x: int) -> str:
+    """calcutes the date that target is reached"""
     days_till: timedelta = timedelta(x)
     today: datetime = datetime.today()
     best_day: datetime = today + days_till
