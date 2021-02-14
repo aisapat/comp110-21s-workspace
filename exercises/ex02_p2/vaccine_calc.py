@@ -20,7 +20,7 @@ def main() -> None:
 
 
 def days_to_target(a: int, b: int, c: int, d: int) -> int:
-    """calculates number of days until target is reached"""
+    """Calculates number of days until target is reached."""
     num_vac: int = int(round((d / 100) * (a * 2)))
     ppl_left: int = int(num_vac - b)
     days: int = int(ppl_left / c)
@@ -29,7 +29,7 @@ def days_to_target(a: int, b: int, c: int, d: int) -> int:
 
 # TODO 3: Define future_date function
 def future_date(x: int) -> str:
-    """calcutes the date that target is reached"""
+    """Calcutes the date that target is reached."""
     days_till: timedelta = timedelta(x)
     today: datetime = datetime.today()
     best_day: datetime = today + days_till
