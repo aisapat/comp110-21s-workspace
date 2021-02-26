@@ -1,3 +1,5 @@
+"""A fun fantasy game"""
+
 __author__ = "730387431"
 
 from random import randint
@@ -9,7 +11,6 @@ DRAGON: str = "\U0001F409"
 SAD: str = "\U0001F622"
 FLOWERS: str = "\U0001F490"
 TROLL: str = "\U0001F5FF"
-
 
 
 def main() -> None:
@@ -31,7 +32,6 @@ def main() -> None:
                 final_stage()
 
 
-
 def greet() -> None:
     """Function to introduce player."""
     global player
@@ -41,9 +41,8 @@ def greet() -> None:
     print(f"You have {points} points.")
 
 
-
 def creepy_lair() -> None:
-    """A function with a troll encounter that changes points global"""
+    """A function with a troll encounter that changes points global."""
     joke: str = str(input(f"You encounter a troll {TROLL} who wants to be a stand-up comic. Do you want to hear his jokes yes/no "))
     global points
     if joke == "yes":
@@ -54,9 +53,8 @@ def creepy_lair() -> None:
         print(f"Oh no {player}! You made the troll SAD {SAD}. He BONKS you. Your point total is {points}")
 
 
-
 def flower_garden(p: int) -> int:
-    """A function in a flower garden that changes points global by taking in a parameter"""
+    """A function in a flower garden that changes points global by taking in a parameter."""
     print(f"Silly {player}! You're allergic to flowers {FLOWERS}. You DIED")
     cont: str = str(input("Would you like to keep playing? (yes/no)"))
     if cont == "yes":
@@ -67,10 +65,9 @@ def flower_garden(p: int) -> int:
     return p
 
 
-
 def final_stage() -> None:
-    """This is level for above and beyond points as well as using a random function"""
-    pick_a_number: int = randint(1,6)
+    """This is level for above and beyond points as well as using a random function."""
+    pick_a_number: int = randint(1, 6)
     print(f"You are challenged by a mystical creature {DRAGON} to predict a number rolled on a die.")
     guess: int = int(input("What is your guess? (Pick a number 1-6)"))
     if pick_a_number == guess:
@@ -84,7 +81,5 @@ def final_stage() -> None:
         main()
 
 
-
-
 if __name__ == "__main__":
-  main()
+    main()
