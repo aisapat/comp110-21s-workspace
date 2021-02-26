@@ -1,4 +1,4 @@
-"""A fun fantasy game"""
+"""A fun fantasy game."""
 
 __author__ = "730387431"
 
@@ -36,14 +36,15 @@ def greet() -> None:
     """Function to introduce player."""
     global player
     player = (input("Welcome PLAYER what is your name? "))
-    print(f"Hello {player} in this story game you will make decisions that will decide if you WIN {THUMBS_UP} or LOSE {SAD}")
+    print(f"Hello {player}. In this game you will face challenges that will decide if you WIN {THUMBS_UP} or LOSE {SAD}")
     global points
     print(f"You have {points} points.")
 
 
 def creepy_lair() -> None:
     """A function with a troll encounter that changes points global."""
-    joke: str = str(input(f"You encounter a troll {TROLL} who wants to be a stand-up comic. Do you want to hear his jokes yes/no "))
+    print(f"You encounter a troll {TROLL} who wants to be a stand-up comic.")
+    joke: str = str(input("Do you want to hear his jokes yes/no "))
     global points
     if joke == "yes":
         points += 50
@@ -77,7 +78,7 @@ def final_stage() -> None:
     else:
         print(f"Oops you lose {SAD}. Better luck next time. Your point total is {points}.")
     while input("Would you like to play again? (yes/no)") == "yes":
-        """This is where I loop the game for above and beyond points"""
+        """This is where I loop the game for above and beyond points."""
         main()
 
 
